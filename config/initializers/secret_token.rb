@@ -19,7 +19,7 @@ def secure_token
 	else
 		#Generate a new token and store it in the token_file.
 		token = SecureRandom.hex(64)
-		Fire.write(token_file, token)
+		File.write(token_file, token)
 		token
 	end
 end
